@@ -13,8 +13,7 @@ shinyUI(pageWithSidebar(
   
   sidebarPanel(
     p("This is a little data explorer that plots the relationship between different columns in a given data frame."),
-    p("It is a generic application and can show any data frame in your environment. As a default it loads SAheart"),
-    p("You can run it by setting a variable called dframe to any data framer with 3 or more columns"),
+    p("As a default it loads SAheart Once it loads the data frame it automatically picks up the column names and plots a chart with X=column1 Y=column2 and Z=Column3. You can use the select input controls below to pick other rows."),
     selectInput('xval', 'X value', names(dataset)),
     selectInput('yval', 'Y value', names(dataset), names(dataset)[[2]]),
     selectInput('zval', 'Z value', names(dataset), names(dataset)[[3]])  
